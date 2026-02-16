@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application for Establishment of School - Annex C-1</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 850px;
+            background: #fff;
+            margin: 0 auto;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h2, .header h3 {
+            margin: 5px 0;
+            text-transform: uppercase;
+        }
+        .header h2 {
+            font-size: 16px;
+        }
+        .header h3 {
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .doc-label {
+            text-align: right;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            margin: 20px 0;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+        /* Form Inputs */
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-row label {
+            font-weight: bold;
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+        .form-row input[type="text"] {
+            flex-grow: 1;
+            border: none;
+            border-bottom: 1px solid #000;
+            outline: none;
+            padding: 5px;
+            background: transparent;
+        }
+        /* Checklist */
+        .checklist {
+            margin-top: 20px;
+            border-top: 2px solid #333;
+            padding-top: 20px;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .checklist-item input[type="checkbox"] {
+            margin-top: 3px;
+            margin-right: 15px;
+            transform: scale(1.2);
+            flex-shrink: 0;
+        }
+        .checklist-text {
+            text-align: justify;
+        }
+        .sub-item {
+            margin-left: 35px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .sub-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .or-divider {
+            text-align: center;
+            font-weight: bold;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        /* Notes & Footer */
+        .notes {
+            margin-top: 30px;
+            font-size: 0.9em;
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #eee;
+        }
+        .notes h4 {
+            margin-top: 0;
+        }
+        .footer-section {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .receiver-box {
+            width: 300px;
+        }
+        .signature-line {
+            border-top: 1px solid #000;
+            margin-top: 40px;
+            padding-top: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .date-line {
+            margin-top: 15px;
+        }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; border: none; padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h3>Department of Education</h3>
+        <h3>Division of ___________________</h3>
+        <h3>Region ___________________</h3>
+        <h2>Application for Establishment of Public Elementary/Secondary School</h2>
+    </div>
+
+    <div class="doc-label">Annex C-1</div>
+    <div class="section-title">Checklist of Documents</div>
+
+    <form>
+        <div class="form-row">
+            <label>Requesting Office/School:</label>
+            <input type="text" name="requesting_office">
+        </div>
+        <div class="form-row">
+            <label>Name of Proponent(s):</label>
+            <input type="text" name="proponent_name">
+        </div>
+        <div class="form-row">
+            <label>Position/Designation:</label>
+            <input type="text" name="position">
+        </div>
+        <div class="form-row">
+            <label>Proposed Name of School:</label>
+            <input type="text" name="school_name">
+        </div>
+        <div class="form-row">
+            <label>Address:</label>
+            <input type="text" name="address">
+        </div>
+
+        <div class="checklist">
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item1">
+                <label for="item1" class="checklist-text">1. Letter request to open a school addressed to the Schools Division Superintendent (SDS) (either from PTA or Barangay Council).</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item2">
+                <label for="item2" class="checklist-text">2. Feasibility study, duly recommended/endorsed by the SDS indicating the following:</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item2a"> <label for="item2a">a. Justification on the need to establish a school;</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item2b"> <label for="item2b">b. Proposed Organizational Structure;</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item2c"> <label for="item2c">c. School Environment (environmental scanning/situational analysis);</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item2d"> <label for="item2d">d. Proposed School Development Plan; and</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item2e"> <label for="item2e">e. Proposed Budget/Budgetary Requirements (to cover the proposed school's crucial resources).</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item3">
+                <label for="item3" class="checklist-text">3. Division Inspection Report signed by the SDS.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item4">
+                <label for="item4" class="checklist-text">4. Sangguniang Bayan/Panglungsod Resolution supporting the establishment of a school, duly approved by the Municipal/City Mayor, indicating therein the proposed name of the school.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item5">
+                <label for="item5" class="checklist-text">5. List of prospective enrollees per grade level, indicating their names, ages, addresses and/or school where they are currently or were enrolled.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item6">
+                <label for="item6" class="checklist-text">6. Justification on the need for the establishment of an MG school, if necessary.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item7a">
+                <label for="item7a" class="checklist-text">7.a Certification from the SDS that no private high school within the Municipality/City is participating in the GASTPE Program of DepED, or that GASTPE participating high school has reached its allocation or number of available slots;</label>
+            </div>
+            
+            <div class="or-divider">OR</div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item7b">
+                <label for="item7b" class="checklist-text">7.b Justification by the SDS on the need to establish a public school to cater to the elementary school graduates/students who cannot afford to enrol in a private high school.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item8">
+                <label for="item8" class="checklist-text">8. Map, preferably drawn to scale, showing the distances of the existing schools within the catchment area of the proposed new school, duly certified by the Municipal/City Engineer.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item9">
+                <label for="item9" class="checklist-text">9. Certification from the Municipal/City Engineer that the proposed school is not within the 2-km radius (for rural areas) and 1 km radius (for urban areas) from any existing public elementary/high school.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item10">
+                <label for="item10" class="checklist-text">10. Justification by the SDS for the waiver on the 2 or 1 km radius requirement, if necessary.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item11">
+                <label for="item11" class="checklist-text">11. Any document such as but not limited to Deed of Donation, Deed of Sale or Contract of Usufruct for 50 years executed in favor of DepED; Original Certificate of Title (OCT) or Transfer Certificate of Title (TCT) in the name of DepED, reflecting the size and boundaries of the school site.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item12">
+                <label for="item12" class="checklist-text">12. Justification from the SDS in case the required size of school site cannot be met.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item13">
+                <label for="item13" class="checklist-text">13. Clearance/permit from the provincial Mines and Geosciences Bureau (MGB) and the Regional Office of the Department of Environment and Natural Resources (DENR) stating that the proposed school site is not a high risk area.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item14">
+                <label for="item14" class="checklist-text">14. School site development plan.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item15">
+                <label for="item15" class="checklist-text">15. School building plan indicating the number and technical specifications of the classrooms to be built.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item16">
+                <label for="item16" class="checklist-text">16. School building design duly approved by DepED Education Facilities Division, Administrative Service.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item17">
+                <label for="item17" class="checklist-text">17. School building permit issued by the Municipal/City Engineer.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item18">
+                <label for="item18" class="checklist-text">18. Bureau of Fire Protection Certificate.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item19">
+                <label for="item19" class="checklist-text">19. Inspection Report from Division In-Charge of Facilities Section, in case classrooms are already constructed.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item20">
+                <label for="item20" class="checklist-text">20. Duly notarized MOA* by and between DepED, represented by SDS, and LGU, represented by the Municipal/City Mayor or Provincial Governor, as the case may be, where the LGU shall provide funds for, among others, the following:</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item20a"> <label for="item20a">a. Construction of the new school building(s);</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item20b"> <label for="item20b">b. Procurement of educational facilities, furniture, textbooks and instructional materials;</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item20c"> <label for="item20c">c. Operation and maintenance for at least five (5) years or until such time when funds for the purpose are incorporated in the national budget; and</label>
+            </div>
+            <div class="sub-item">
+                <input type="checkbox" id="item20d"> <label for="item20d">d. Salaries of teaching and non-teaching personnel, preferably at par with national salary rates.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item21">
+                <label for="item21" class="checklist-text">21. Sangguniang Bayan/Panglalawigan/Panglungsod Resolution for the purpose.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item22">
+                <label for="item22" class="checklist-text">22. Certification from the Schools Division Superintendent that the Division Office has sufficient fund to cover resulting expenses, if any.</label>
+            </div>
+
+            <div class="checklist-item">
+                <input type="checkbox" id="item23">
+                <label for="item23" class="checklist-text">23. List of teaching and non-teaching personnel to be borrowed from the existing nearby school(s), duly identified by the respective Item Number per Personal Services Itemization and Plantilla of Personnel (PSIPOP) and name of school, if any.</label>
+            </div>
+
+        </div>
+
+        <div class="notes">
+            <h4>Notes:</h4>
+            <p>a. Please indicate N/A, if not applicable.</p>
+            <p>b. Kindly submit all the lacking documents on or before <input type="text" style="border:none; border-bottom:1px solid #000; width: 150px;">.</p>
+            <p>c. Documents to be submitted must be two (2) sets, placed in separate folders, arranged following the sequence above and labeled appropriately.</p>
+            <p>d. To facilitate evaluation, please do not include other documents not listed above.</p>
+        </div>
+
+        <div class="footer-section">
+            <div class="receiver-box">
+                <p><strong>Documents Received by:</strong></p>
+                <div class="signature-line">
+                    (Signature over Printed Name and Designation)
+                </div>
+                <div class="date-line">
+                    <strong>Date:</strong> <input type="text" style="border:none; border-bottom:1px solid #000; width: 150px;">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
